@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>球団名</h2>
+    <p th:text="${baseball.teamName}"></p>
+    <h2>本拠地</h2>
+    <p th:text="$baseball.headquarters}"></p>
+    <h2>発足</h2>
+    <p th:text="${baseball.inauguration}"></p>
+    <h2>歴史</h2>
+    <pre th:text="$baseball.history}"></pre>
+    <a th:href="@{/baseball/showList}">
+      <button>戻る</button>
+    </a>
+  </body>
+</html>
