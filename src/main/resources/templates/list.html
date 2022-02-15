@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-
 <head>
-	<meta charset="UTF-8">
-	<title>野球チーム一覧</title>
+<meta charset="UTF-8">
+<title>ex01</title>
 </head>
-
 <body>
-	<h1>野球チーム一覧</h1>
-	 <div th:each="baseball : ${baseballList}">
-	  <a th:text="${baseball.teamName}" th:href="@{/baseball/showDetail?id=} + ${baseball.id}">dummy</a>
-	  <p></p>
-  </div>
+  <h1>野球チーム一覧</h1>
+  	<div th:each="team : ${baseballList}">
+	  <a href="detail.html" th:href="@{/baseball/showDetail(id=${team.id})}"><span th:text="${team.teamName}">１件もデータが存在しません</span></a>
+	</div>
+  <span th:text="${nothing}"></span>
 </body>
-
 </html>
